@@ -1,0 +1,354 @@
+[
+    {
+        "name": "Superman",
+        "real_name": "Clark Kent",
+        "age": 1938,
+        "home": "DC",
+        "biography": "Superman is a superhero from DC Comics. He is known for his superhuman strength, ability to fly, and X-ray vision.",
+        "equipment": ["Superhero suit", "Tool belt"]
+    },
+    {
+        "name": "Batman",
+        "real_name": "Bruce Wayne",
+        "age": 1939,
+        "home": "DC",
+        "biography": "Batman is a superhero from DC Comics. He is known for his martial arts skills, brilliant intellect, and vast wealth.",
+        "equipment": ["Bat-suit", "Batmobile", "Batarangs"]
+    },
+    {
+        "name": "Wonder Woman",
+        "real_name": "Diana Prince",
+        "age": 1941,
+        "home": "DC",
+        "biography": "Wonder Woman is a superheroine from DC Comics. She is an Amazon warrior princess with superhuman abilities and wielder of the Lasso of Truth.",
+        "equipment": ["Indestructible tiara", "Lasso of Truth"]
+    },
+    {
+        "name": "Spider-Man",
+        "real_name": "Peter Parker",
+        "age": 1962,
+        "home": "Marvel",
+        "biography": "Spider-Man is a superhero from Marvel Comics. After being bitten by a radioactive spider, he gained spider-like abilities.",
+        "equipment": ["Spider-Man suit", "Web-shooters"]
+    },
+    {
+        "name": "Iron Man",
+        "real_name": "Tony Stark",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Iron Man is a superhero from Marvel Comics. He is known for his advanced armor suit and technological genius.",
+        "equipment": ["Iron Man suit", "Arc reactor"]
+    },
+    {
+        "name": "Thor",
+        "real_name": "Thor Odinson",
+        "age": 1962,
+        "home": "Marvel",
+        "biography": "Thor is a superhero from Marvel Comics. He is the god of thunder and wields a magical hammer called Mjolnir.",
+        "equipment": ["Mjolnir"]
+    },
+    {
+        "name": "Captain America",
+        "real_name": "Steve Rogers",
+        "age": 1941,
+        "home": "Marvel",
+        "biography": "Captain America is a superhero from Marvel Comics. He is a symbol of patriotism and wields an indestructible shield.",
+        "equipment": ["Vibranium shield"]
+    },
+    {
+        "name": "Hulk",
+        "real_name": "Bruce Banner",
+        "age": 1962,
+        "home": "Marvel",
+        "biography": "Hulk is a superhero from Marvel Comics. When he gets angry, he transforms into a giant green-skinned creature with incredible strength.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Aquaman",
+        "real_name": "Arthur Curry",
+        "age": 1941,
+        "home": "DC",
+        "biography": "Aquaman is the king of Atlantis and has the ability to communicate with sea creatures and control water.",
+        "equipment": ["Trident of Aquaman", "Scale armor"]
+    },
+    {
+        "name": "Black Widow",
+        "real_name": "Natasha Romanoff",
+        "age": 1964,
+        "home": "Marvel",
+        "biography": "Black Widow is a spy and S.H.I.E.L.D. agent with exceptional combat skills and espionage experience.",
+        "equipment": ["Widow's Bite", "Stealth suit"]
+    },
+    {
+        "name": "Green Lantern",
+        "real_name": "Hal Jordan",
+        "age": 1959,
+        "home": "DC",
+        "biography": "Green Lantern is a member of the Green Lantern Corps, an intergalactic group of universe guardians. He uses a power ring that grants him abilities.",
+        "equipment": ["Power ring", "Power battery"]
+    },
+    {
+        "name": "Doctor Strange",
+        "real_name": "Stephen Strange",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Doctor Strange is the Sorcerer Supreme of the Marvel universe. He uses magic and sorcery to defend the world from supernatural threats.",
+        "equipment": ["Cloak of Levitation", "Eye of Agamotto"]
+    },
+    {
+        "name": "Wolverine",
+        "real_name": "Logan",
+        "age": 1974,
+        "home": "Marvel",
+        "biography": "Wolverine is a mutant with a skeleton coated in adamantium and retractable claws. He is a fierce fighter and has incredible regeneration ability.",
+        "equipment": ["Adamantium claws", "Wolverine suit"]
+    },
+    {
+        "name": "Captain Marvel",
+        "real_name": "Carol Danvers",
+        "age": 1968,
+        "home": "Marvel",
+        "biography": "Captain Marvel is a superheroine with cosmic powers. She is an Air Force pilot turned space hero.",
+        "equipment": ["Captain Marvel suit"]
+    },
+    {
+        "name": "Black Panther",
+        "real_name": "T'Challa",
+        "age": 1966,
+        "home": "Marvel",
+        "biography": "Black Panther is the king of Wakanda and possesses enhanced abilities from the heart-shaped herb. He also has access to vibranium.",
+        "equipment": ["Black Panther suit", "Vibranium claws"]
+    },
+    {
+        "name": "Flash",
+        "real_name": "Barry Allen",
+        "age": 1956,
+        "home": "DC",
+        "biography": "The Flash is a superhero from DC Comics. He possesses the ability of super speed and is a founding member of the Justice League.",
+        "equipment": ["Flash suit", "Speed Force ring"]
+    },
+    {
+        "name": "Cyborg",
+        "real_name": "Victor Stone",
+        "age": 1980,
+        "home": "DC",
+        "biography": "Cyborg is a superhero who is part human and part machine. He has superhuman strength and various technological abilities.",
+        "equipment": ["Cybernetic body", "Integrated weapons"]
+    },
+    {
+        "name": "Ant-Man",
+        "real_name": "Scott Lang",
+        "age": 1962,
+        "home": "Marvel",
+        "biography": "Ant-Man is a superhero capable of shrinking and communicating with ants. He uses a special suit and helmet to control his ability.",
+        "equipment": ["Ant-Man suit", "Communication helmet"]
+    },
+    {
+        "name": "Daredevil",
+        "real_name": "Matt Murdock",
+        "age": 1964,
+        "home": "Marvel",
+        "biography": "Daredevil is a blind lawyer who fights crime in Hell's Kitchen, New York. He has enhanced senses and is an expert in martial arts.",
+        "equipment": ["Daredevil's billy club", "Red suit"]
+    },
+    {
+        "name": "Catwoman",
+        "real_name": "Selina Kyle",
+        "age": 1940,
+        "home": "DC",
+        "biography": "Catwoman is a complex anti-heroine from DC Comics. She is known for her agility, thievery skills, and complicated relationship with Batman.",
+        "equipment": ["Whip", "Cat-themed costume"]
+    },
+    {
+        "name": "Mr. Miracle",
+        "real_name": "Scott Free",
+        "age": 1971,
+        "home": "DC",
+        "biography": "Mr. Miracle is a superhero from DC Comics known as the greatest escape artist in the universe. He was raised on Apokolips and escaped to Earth.",
+        "equipment": ["Mother Box", "Escape artist gear"]
+    },
+    {
+        "name": "Plastic Man",
+        "real_name": "Patrick 'Eel' O'Brian",
+        "age": 1941,
+        "home": "DC",
+        "biography": "Plastic Man is a superhero from DC Comics with the ability to stretch and contort his body into any shape. He was a former criminal who turned to heroism.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Shazam",
+        "real_name": "Billy Batson",
+        "age": 1940,
+        "home": "DC",
+        "biography": "Shazam, also known as Captain Marvel, is a superhero from DC Comics. A young boy who transforms into an adult superhero by uttering the magic word 'Shazam'.",
+        "equipment": ["Magic powers granted by the wizard Shazam"]
+    },
+    {
+        "name": "Space Ghost",
+        "real_name": "Thaddeus Bach",
+        "age": 1966,
+        "home": "Hanna-Barbera",
+        "biography": "Space Ghost is a superhero and intergalactic crime-fighter created by Hanna-Barbera. He uses his powerful armbands and ship, the Phantom Cruiser, to fight evil.",
+        "equipment": ["Power bands", "Invisibility belt"]
+    },
+    {
+        "name": "Beast",
+        "real_name": "Hank McCoy",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Beast is a superhero and member of the X-Men from Marvel Comics. He is known for his superhuman strength, agility, and intelligence, as well as his blue fur.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Angel",
+        "real_name": "Warren Worthington III",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Angel is a superhero and member of the X-Men from Marvel Comics. He has large, feathered wings that allow him to fly and is known for his wealth and compassion.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Captain Britain",
+        "real_name": "Brian Braddock",
+        "age": 1976,
+        "home": "Marvel",
+        "biography": "Captain Britain is a superhero from Marvel Comics. He was granted powers by the magician Merlyn and protects Britain with his strength, flight, and mystical abilities.",
+        "equipment": ["Star Sceptre", "Amulet of Right"]
+    },
+    {
+        "name": "Cyclops",
+        "real_name": "Scott Summers",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Cyclops is a superhero and leader of the X-Men from Marvel Comics. He emits powerful optic blasts from his eyes and is known for his leadership and tactical skills.",
+        "equipment": ["Visor to control optic blasts"]
+    },
+    {
+        "name": "Falcon",
+        "real_name": "Sam Wilson",
+        "age": 1969,
+        "home": "Marvel",
+        "biography": "Falcon is a superhero from Marvel Comics. He is known for his ability to fly using a specialized wing harness and his partnership with Captain America.",
+        "equipment": ["Wing harness", "Redwing (drone or falcon companion)"]
+    },
+    {
+        "name": "Human Torch",
+        "real_name": "Johnny Storm",
+        "age": 1961,
+        "home": "Marvel",
+        "biography": "Human Torch is a superhero and member of the Fantastic Four from Marvel Comics. He can engulf his body in flames and fly, as well as control fire.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Iceman",
+        "real_name": "Bobby Drake",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Iceman is a superhero and member of the X-Men from Marvel Comics. He can generate and manipulate ice, turning his body into ice and creating ice constructs.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Invisible Woman",
+        "real_name": "Sue Storm",
+        "age": 1961,
+        "home": "Marvel",
+        "biography": "Invisible Woman is a superhero and member of the Fantastic Four from Marvel Comics. She can become invisible and generate force fields.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Mar-Vell",
+        "real_name": "Mar-Vell",
+        "age": 1967,
+        "home": "Marvel",
+        "biography": "Mar-Vell, also known as Captain Marvel, is a superhero from Marvel Comics. He is a Kree warrior who protects Earth with his advanced alien abilities.",
+        "equipment": ["Nega-Bands"]
+    },
+    {
+        "name": "Mr. Fantastic",
+        "real_name": "Reed Richards",
+        "age": 1961,
+        "home": "Marvel",
+        "biography": "Mr. Fantastic is a superhero and leader of the Fantastic Four from Marvel Comics. He has the ability to stretch his body into any shape and is a brilliant scientist.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Punisher",
+        "real_name": "Frank Castle",
+        "age": 1974,
+        "home": "Marvel",
+        "biography": "Punisher is an anti-hero from Marvel Comics. A former Marine who wages a one-man war on crime using his military training and arsenal of weapons.",
+        "equipment": ["Various firearms", "Body armor"]
+    },
+    {
+        "name": "Rogue",
+        "real_name": "Anna Marie",
+        "age": 1981,
+        "home": "Marvel",
+        "biography": "Rogue is a superhero and member of the X-Men from Marvel Comics. She can absorb the powers, memories, and abilities of others through physical touch.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Thing",
+        "real_name": "Ben Grimm",
+        "age": 1961,
+        "home": "Marvel",
+        "biography": "Thing is a superhero and member of the Fantastic Four from Marvel Comics. He possesses superhuman strength and durability, and his body is covered in rock-like skin.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Black Bolt",
+        "real_name": "Blackagar Boltagon",
+        "age": 1965,
+        "home": "Marvel",
+        "biography": "Black Bolt is a superhero and leader of the Inhumans from Marvel Comics. He has a powerful voice that can cause massive destruction with a whisper.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Bullseye",
+        "real_name": "Lester (last name unknown)",
+        "age": 1976,
+        "home": "Marvel",
+        "biography": "Bullseye is a supervillain and archenemy of Daredevil from Marvel Comics. He is known for his exceptional accuracy and ability to turn any object into a deadly weapon.",
+        "equipment": ["Various weapons improvised from everyday objects"]
+    },
+    {
+        "name": "Ghost Rider",
+        "real_name": "Johnny Blaze",
+        "age": 1972,
+        "home": "Marvel",
+        "biography": "Ghost Rider is a superhero from Marvel Comics. Johnny Blaze made a deal with the devil to save his father's life and was transformed into the Spirit of Vengeance.",
+        "equipment": ["Hellfire-infused motorcycle", "Chain whip"]
+    },
+    {
+        "name": "Phoenix",
+        "real_name": "Jean Grey",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Phoenix is a superhero and member of the X-Men from Marvel Comics. She is a powerful telepath and telekinetic who becomes the host for the cosmic Phoenix Force.",
+        "equipment": ["None"]
+    },
+    {
+        "name": "Professor X",
+        "real_name": "Charles Xavier",
+        "age": 1963,
+        "home": "Marvel",
+        "biography": "Professor X is a superhero and founder of the X-Men from Marvel Comics. He is a powerful telepath and advocates for peaceful coexistence between humans and mutants.",
+        "equipment": ["Cerebro"]
+    },
+    {
+        "name": "Space Ghost",
+        "real_name": "Thaddeus Bach",
+        "age": 1966,
+        "home": "Hanna-Barbera",
+        "biography": "Space Ghost is a superhero and intergalactic crime-fighter created by Hanna-Barbera. He uses his powerful armbands and ship, the Phantom Cruiser, to fight evil.",
+        "equipment": ["Power bands", "Invisibility belt"]
+    },
+    {
+        "name": "War Machine",
+        "real_name": "James 'Rhodey' Rhodes",
+        "age": 1979,
+        "home": "Marvel",
+        "biography": "War Machine is a superhero and ally of Iron Man from Marvel Comics. He wears a heavily armed suit of armor that grants him superhuman strength and advanced weaponry.",
+        "equipment": ["War Machine armor"]
+    }
+]

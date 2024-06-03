@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+
+  mongo_db:
+    container_name: mongo_db
+    image: mongo:4
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  py-server:
+    container_name: py-server
+    build: ./server
+    
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server:/server
+    command: sh -c "python app.py"
+    depends_on:
+      - mongo_db
+
+
+volumes:
+  mongo_data:
