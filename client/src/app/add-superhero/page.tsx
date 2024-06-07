@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import { convertFilesToBase64 } from '@/services/utils'
 
 interface SuperheroForm {
     name: string;
@@ -9,9 +10,10 @@ interface SuperheroForm {
     age: string;
     biography: string;
     equipment: string;
-    image: File | null; 
+    images: string[]; 
 }
 export default function AddSuperhero() {
+    // Estado inicial del formulario del superhéroe
     const [superhero, setSuperhero] = useState<SuperheroForm>({
         name: '',
         real_name: '',
@@ -19,51 +21,43 @@ export default function AddSuperhero() {
         age: '',
         biography: '',
         equipment: '',
-        image: null
+        images: []
     });
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    // Maneja los cambios en los inputs del formulario
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setSuperhero({
             ...superhero,
             [name]: value
         });
     };
-
-    const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setSuperhero({
-            ...superhero,
-            [name]: value
-        });
-    };
-    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files ? e.target.files[0] : null;
-        setSuperhero({
-            ...superhero,
-            image: file
-        });
+    // Maneja los cambios en el input de imágenes
+    const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const files = e.target.files;
+        if (files) {
+            try {
+                const base64Strings = await convertFilesToBase64(files);
+                setSuperhero({ ...superhero, images: base64Strings });
+            } catch (error) {
+                console.error("Error reading images:", error);
+                toast.error('Error reading images');
+            }
+        }
     };
     
+    // Maneja el envío del formulario
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const formData = new FormData();
-        formData.append('name', superhero.name);
-        formData.append('real_name', superhero.real_name);
-        formData.append('home', superhero.home);
-        formData.append('age', superhero.age);
-        formData.append('biography', superhero.biography);
-        formData.append('equipment', superhero.equipment);
-        if (superhero.image) {
-            formData.append('image', superhero.image);
-        }
-
-
         try {
+            console.log('super:', superhero);
+
             const response = await fetch('http://localhost:5000/superhero', {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(superhero)
             });
 
             if (!response.ok) {
@@ -73,6 +67,15 @@ export default function AddSuperhero() {
             const data = await response.json();
             console.log('Superhero added:', data);
             toast.success('Superhero added successfully');
+            setSuperhero({
+                name: '',
+                real_name: '',
+                home: '',
+                age: '',
+                biography: '',
+                equipment: '',
+                images: []
+            });
         } catch (error) {
             console.error('Error adding superhero:', error);
             toast.error('Error adding superhero');
@@ -85,31 +88,42 @@ export default function AddSuperhero() {
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                     <label className="block mb-1">Name</label>
-                    <input type="text" name="name" value={superhero.name} onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <input type="text" name="name" value={superhero.name} onChange={handleChange} required minLength={3} maxLength={50} pattern="[A-Za-z\s]+" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <p className="text-sm text-gray-500">Only letters and spaces, 3-50 characters.</p>
                 </div>
                 <div>
                     <label className="block mb-1">Real Name</label>
-                    <input type="text" name="real_name" value={superhero.real_name} onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <input type="text" name="real_name" value={superhero.real_name} onChange={handleChange} required minLength={3} maxLength={50} pattern="[A-Za-z\s]+" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <p className="text-sm text-gray-500">Only letters and spaces, 3-50 characters.</p>
                 </div>
                 <div>
                     <label className="block mb-1">Home</label>
-                    <input type="text" name="home" value={superhero.home} onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <select name="home" value={superhero.home} onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400">
+                        <option value=""></option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="DC">DC</option>
+                    </select>
+                    <p className="text-sm text-gray-500">Select Marvel or DC.</p>
                 </div>
                 <div>
                     <label className="block mb-1">Year appearance</label>
-                    <input type="text" name="age" value={superhero.age} onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <input type="number" name="age" value={superhero.age} onChange={handleChange} required min={1900} max={2024} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <p className="text-sm text-gray-500">Enter a year between 1900 and 2024.</p>
                 </div>
                 <div>
                     <label className="block mb-1">Biography</label>
-                    <textarea name="biography" value={superhero.biography} onChange={handleTextareaChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <textarea name="biography" value={superhero.biography} onChange={handleChange} required minLength={50} maxLength={500} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <p className="text-sm text-gray-500">50-500 characters.</p>
                 </div>
                 <div>
                     <label className="block mb-1">Equipment</label>
-                    <input type="text" name="equipment" value={superhero.equipment} onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <input type="text" name="equipment" value={superhero.equipment} onChange={handleChange} required minLength={5} maxLength={100} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <p className="text-sm text-gray-500">5-100 characters.</p>
                 </div>
                 <div>
-                    <label className="block mb-1">Image</label>
-                    <input type="file" name="image" onChange={handleImageChange} required className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <label className="block mb-1">Images</label>
+                    <input type="file" name="images" onChange={handleImageChange} multiple required accept="image/png, image/jpeg" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <p className="text-sm text-gray-500">Accepts PNG and JPEG formats.</p>
                 </div>
                 <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Add Superhero</button>
             </form>

@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function SearchBar() {
     const [inputText, setInputText] = useState('')
@@ -10,6 +10,7 @@ export default function SearchBar() {
     function handleSubmit() {
         if (!inputText) return
         router.push(`/search/${inputText}`)
+        setInputText('') 
     }
 
     return (

@@ -2,13 +2,13 @@ import SuperheroesContainer from '@/components/SuperheroesContainer'
 
 export const dynamic = 'force-dynamic'
 
-export default function Search({
-    params,
-    searchParams,
-}: {
+
+interface SearchProps {
     params: { id: string }
     searchParams?: { [key: string]: string }
-}) {
+  }
+  
+  export default function Search({ params, searchParams }: SearchProps) {
     return (
         <div className="flex justify-center">
             <div>
@@ -16,6 +16,7 @@ export default function Search({
                     Results for: 
                     <b className="capitalize"> {decodeURI(params.id)}</b>
                 </p>
+                {/* Renderiza el componente SuperheroesContainer con el nombre y la casa como propiedades */}
                 <SuperheroesContainer
                     name={decodeURI(params.id)}
                     house={searchParams?.house}

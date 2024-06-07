@@ -13,7 +13,6 @@ services:
   py-server:
     container_name: py-server
     build: ./server
-    
     ports:
       - "5000:5000"
     volumes:
@@ -21,6 +20,17 @@ services:
     command: sh -c "python app.py"
     depends_on:
       - mongo_db
+
+  nextjs-client:
+    container_name: nextjs-client
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/client
+    command: sh -c "npm run start"
+    depends_on:
+      - py-server
 
 
 volumes:
