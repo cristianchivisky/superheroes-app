@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-
   mongo_db:
     container_name: mongo_db
     image: mongo:4
@@ -23,15 +22,14 @@ services:
 
   nextjs-client:
     container_name: nextjs-client
-    build: ./client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - ./client:/client
     command: sh -c "npm run start"
     depends_on:
       - py-server
-
 
 volumes:
   mongo_data:
