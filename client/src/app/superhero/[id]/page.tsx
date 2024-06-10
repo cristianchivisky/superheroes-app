@@ -211,9 +211,12 @@ export default function Superhero ({ params }: SuperheroProps) {
                                     <label className="block mb-1">Equipment</label>
                                     <input type="text" name="equipment" value={formData.equipment} onChange={handleInputChange} required minLength={5} maxLength={100} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
                                 </div>
-                                <div>
-                                    <label className="block mb-1">Add New Image</label>
-                                    <input type="file" accept="image/png, image/jpeg" onChange={handleAddImage} multiple className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                                <div className="flex items-center space-x-2">
+                                    <div>
+                                        <label className="block mb-1">Add New Image</label>
+                                        <input type="file" accept="image/png, image/jpeg" onChange={handleAddImage} multiple className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                                    </div>
+                                    <div className="text-center text-gray-500 mt-2">Total Images: {formData.images?.length || 0}</div>
                                 </div>
                                 <button type="button" onClick={handleUpdate} className="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600">Update</button>
                                 <button type="button" onClick={handleDelete} className="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600">Delete</button>
