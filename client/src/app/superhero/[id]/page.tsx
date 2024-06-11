@@ -187,7 +187,7 @@ export default function Superhero ({ params }: SuperheroProps) {
                                 </div>
                                 <div>
                                     <label className="block mb-1">Real Name</label>
-                                    <input type="text" name="real_name" value={formData.real_name} onChange={handleInputChange} required minLength={3} maxLength={50} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                                    <input type="text" name="real_name" value={formData.real_name} onChange={handleInputChange} minLength={3} maxLength={50} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
                                 </div>
                                 <div>
                                     <label className="block mb-1">Home</label>
@@ -209,7 +209,7 @@ export default function Superhero ({ params }: SuperheroProps) {
                                 </div>
                                 <div>
                                     <label className="block mb-1">Equipment</label>
-                                    <input type="text" name="equipment" value={formData.equipment} onChange={handleInputChange} required minLength={5} maxLength={100} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                                    <input type="text" name="equipment" value={formData.equipment} onChange={handleInputChange} minLength={5} maxLength={100} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <div>

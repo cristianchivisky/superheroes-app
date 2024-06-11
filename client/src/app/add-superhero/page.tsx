@@ -93,7 +93,7 @@ export default function AddSuperhero() {
                 </div>
                 <div>
                     <label className="block mb-1">Real Name</label>
-                    <input type="text" name="real_name" value={superhero.real_name} onChange={handleChange} required minLength={3} maxLength={50} pattern="[A-Za-z\s]+" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <input type="text" name="real_name" value={superhero.real_name} onChange={handleChange} minLength={3} maxLength={50} pattern="[A-Za-z\s]+" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
                     <p className="text-sm text-gray-500">Only letters and spaces, 3-50 characters.</p>
                 </div>
                 <div>
@@ -112,12 +112,12 @@ export default function AddSuperhero() {
                 </div>
                 <div>
                     <label className="block mb-1">Biography</label>
-                    <textarea name="biography" value={superhero.biography} onChange={handleChange} required minLength={50} maxLength={500} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
-                    <p className="text-sm text-gray-500">50-500 characters.</p>
+                    <textarea name="biography" value={superhero.biography} onChange={handleChange} required minLength={10} maxLength={500} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <p className="text-sm text-gray-500">10-500 characters.</p>
                 </div>
                 <div>
                     <label className="block mb-1">Equipment</label>
-                    <input type="text" name="equipment" value={superhero.equipment} onChange={handleChange} required minLength={5} maxLength={100} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
+                    <input type="text" name="equipment" value={superhero.equipment} onChange={handleChange} minLength={5} maxLength={100} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400" />
                     <p className="text-sm text-gray-500">5-100 characters.</p>
                 </div>
                 <div>
