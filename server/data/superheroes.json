@@ -336,14 +336,6 @@
         "equipment": ["Cerebro"]
     },
     {
-        "name": "Space Ghost",
-        "real_name": "Thaddeus Bach",
-        "age": 1966,
-        "home": "Hanna-Barbera",
-        "biography": "Space Ghost is a superhero and intergalactic crime-fighter created by Hanna-Barbera. He uses his powerful armbands and ship, the Phantom Cruiser, to fight evil.",
-        "equipment": ["Power bands", "Invisibility belt"]
-    },
-    {
         "name": "War Machine",
         "real_name": "James 'Rhodey' Rhodes",
         "age": 1979,
