@@ -106,7 +106,7 @@ export default function Superhero ({ params }: SuperheroProps) {
     const handleUpdate = async () => {
         try {
             console.log(formData)
-            const response = await fetch(`http://localhost:5000/superhero/${id}`, {
+            const response = await fetch(`http://localhost:5000/superhero/update/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -134,7 +134,7 @@ export default function Superhero ({ params }: SuperheroProps) {
                         <button
                             onClick={async () => {
                                 try {
-                                    const response = await fetch(`http://localhost:5000/superhero/${id}`, {
+                                    const response = await fetch(`http://localhost:5000/superhero/delete/${id}`, {
                                         method: 'DELETE'
                                     });
                         

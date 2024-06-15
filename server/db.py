@@ -5,8 +5,21 @@ import os
 from flask import Flask
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://mongo_db:27017/superheroes"
-mongo = PyMongo(app)
+def connect_db():
+    """Función para conectar a la base de datos Mongo.
+    Si la conexión es exitosa, devuelve el objeto de PyMongo. De lo contrario,
+    imprime un mensaje de error y devuelve None.
+    """
+    try:
+        app.config["MONGO_URI"] = "mongodb://mongo_db:27017/superheroes"
+        mongo = PyMongo(app)
+        print("Conectado a Mongo")
+        return mongo
+    except ConnectionError as e:
+        print("Error de conexión con Mongo:", e)
+        return None
+
+mongo = connect_db()
 
 def load_data():
     """Carga los datos iniciales en la base de datos.

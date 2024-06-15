@@ -31,7 +31,7 @@ def get_superheroes():
     superheroes = mongo.db.superheroes.find()  # Obtiene todos los superhéroes de la base de datos
     return jsonify(format_superheroes(superheroes))
 
-@routes_blueprint.route('/superhero', methods=['POST'])
+@routes_blueprint.route('/add_superhero', methods=['POST'])
 def add_superhero():
     """Agrega un nuevo documento de superhéroe a la base de datos."""
     data = request.get_json()  # Obtiene los datos del JSON enviado desde el frontend
@@ -43,14 +43,14 @@ def add_superhero():
     mongo.db.superheroes.insert_one(data)
     return jsonify({"message": "Superhero added"}), 201
 
-@routes_blueprint.route('/superhero/<id>', methods=['PUT'])
+@routes_blueprint.route('/superhero/update/<id>', methods=['PUT'])
 def update_superhero(id):
     """Modifica un documento de superhéroe de la base de datos."""
     data = request.get_json()
     mongo.db.superheroes.update_one({"_id": ObjectId(id)}, {"$set": data})
     return jsonify({"message": f"Superhero updated {data}"})
 
-@routes_blueprint.route('/superhero/<id>', methods=['DELETE'])
+@routes_blueprint.route('/superhero/delete/<id>', methods=['DELETE'])
 def delete_superhero(id):
     """Elimina un documento de superhéroe de la base de datos."""
     try:

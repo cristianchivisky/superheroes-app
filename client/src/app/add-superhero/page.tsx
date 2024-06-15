@@ -52,7 +52,7 @@ export default function AddSuperhero() {
         try {
             console.log('super:', superhero);
 
-            const response = await fetch('http://localhost:5000/superhero', {
+            const response = await fetch('http://localhost:5000/add_superhero', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
